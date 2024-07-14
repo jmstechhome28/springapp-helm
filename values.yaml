@@ -1,0 +1,10 @@
+image:
+  repository: ybmsr/jaava-webp-springapp
+  tag: v1
+  pullPolicy: Always
+  containerPort: 8080
+
+replicaCount: 1
+securityContext: {}
+service:
+  type: LoadBalancer
