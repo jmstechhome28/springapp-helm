@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: springapp
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/jmstechhome28/springapp-helm.git
+    targetRevision: master
+    path: /
+    helm:
+      values: |
+        image:
+          repository: 060795946012.dkr.ecr.ap-south-1.amazonaws.com/springapp-helm
+          tag: latest
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: springapp
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
