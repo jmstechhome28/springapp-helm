@@ -10,5 +10,6 @@ spec:
     - name: http
       port: {{ .Values.image.containerPort }}
       targetPort: {{ .Values.image.containerPort }}
+      nodePort: {{ .Values.service.nodePort }}
   selector:
     app.kubernetes.io/name: {{ .Chart.Name }}
