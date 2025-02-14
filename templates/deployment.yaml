@@ -17,6 +17,10 @@ spec:
       labels:
         app.kubernetes.io/name: {{ .Chart.Name}}
     spec:
+      {{- if .Values.imagePullSecret }}  
+      imagePullSecrets:
+        - name: {{ .Values.imagePullSecret }}
+      {{- end }}
       containers:
           - image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion}}"
             imagePullPolicy: {{ .Values.image.pullPolicy }}
