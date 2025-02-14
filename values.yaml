@@ -3,7 +3,7 @@ image:
   tag: "v1"
   pullPolicy: Always
   containerPort: 8080
-
+imagePullSecret: ecr-secret
 replicaCount: 1
 securityContext: {}
 service:
