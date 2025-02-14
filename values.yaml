@@ -7,4 +7,5 @@ image:
 replicaCount: 1
 securityContext: {}
 service:
-  type: LoadBalancer
+  type: NodePort
+  nodePort: 30009
