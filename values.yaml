@@ -1,6 +1,6 @@
 image:
-  repository: ybmsr/jaava-webp-springapp
-  tag: v1
+  repository: 060795946012.dkr.ecr.ap-south-1.amazonaws.com/springapp-helm
+  tag: latest
   pullPolicy: Always
   containerPort: 8080
 
