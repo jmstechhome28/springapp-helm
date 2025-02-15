@@ -1,6 +1,6 @@
 image:
   repository: 060795946012.dkr.ecr.ap-south-1.amazonaws.com/springapp-helm
-  tag: "v8"
+  tag: "v9"
   pullPolicy: Always
   containerPort: 8080
 imagePullSecret: ecr-secret
