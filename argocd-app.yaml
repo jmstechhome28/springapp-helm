@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/jmstechhome28/springapp-helm.git
     targetRevision: master
-    path: /
+    path: springapp
     helm:
       valueFiles:
         - values.yaml 
