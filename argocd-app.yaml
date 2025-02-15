@@ -9,6 +9,9 @@ spec:
     repoURL: https://github.com/jmstechhome28/springapp-helm.git
     targetRevision: master
     path: /
+    helm:
+      valueFiles:
+        - values.yaml 
   destination:
     server: https://kubernetes.default.svc
     namespace: springapp
