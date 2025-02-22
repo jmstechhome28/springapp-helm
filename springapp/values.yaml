@@ -8,4 +8,4 @@ replicaCount: 1
 securityContext: {}
 service:
   type: NodePort
-  nodePort: 30009
+  nodePort: 30010
